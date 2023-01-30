@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "196566622901",
+    "firebase_url": "https://wordpuzzle-a99ec-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "wordpuzzle-a99ec",
+    "storage_bucket": "wordpuzzle-a99ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:196566622901:android:a5d2937673bf27097c94fc",
+        "android_client_info": {
+          "package_name": "com.BGGames.WordPuzzle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "196566622901-6t4hjbcc8457n7ialbo5sk5anlb4n843.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADAVd3ce9eaYTEh0WY7q0XfU71EXw00Wg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "196566622901-6t4hjbcc8457n7ialbo5sk5anlb4n843.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

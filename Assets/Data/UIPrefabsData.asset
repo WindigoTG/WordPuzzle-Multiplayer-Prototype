@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fadbfdbf27b3ed4985f9c5c8fbccf4a, type: 3}
+  m_Name: UIPrefabsData
+  m_EditorClassIdentifier: 
+  _mainMenuPrefab: {fileID: 7644918258351256742, guid: 3ac0fe8fd94ffd946be95f9a5a63fa74, type: 3}
+  _settingsPrefab: {fileID: 8732032169785586500, guid: 8524eecd7261116488ccf114ad063511, type: 3}
+  _screenCoverPrefab: {fileID: 6424668124189680501, guid: 320ebd318fa2cf14aaa86e88a1a4f131, type: 3}
+  _socialPrefab: {fileID: 1870844960610246565, guid: c324d4836b78ac143932a0ee0987acf9, type: 3}
+  _themeSelectionView: {fileID: 116733801181977742, guid: 09b10f3539901c54783d7e9b5e6d7c53, type: 3}
+  _themeSelectionItem: {fileID: 3864316699992726344, guid: 636da65092f17d444b26d5ef3a47a63a, type: 3}
+  _gameplayUiView: {fileID: 2983362138677230133, guid: 6a5e5232b33cabe4899dfd757217eeaf, type: 3}
+  _matchmakingView: {fileID: 369967142124569557, guid: e6d1e8f1684b2fc44ba4309dee4e4e62, type: 3}
+  _loginMenuPrefab: {fileID: 4167636920186687558, guid: 9a5be6132c110be48b40a2519b48a84a, type: 3}
+  _playerProfileUi: {fileID: 638158987490169031, guid: 1de835056ebb0904499ad7f8659c7b32, type: 3}
+  _interestItemPrefab: {fileID: 5217849449672339947, guid: bccb1877e96bf8648be04a2ba95a0632, type: 3}
+  _inputLetter: {fileID: 7579215337987627064, guid: 94ff38ad54b3cdc40a5efc2076e44499, type: 3}
+  _crosswordCell: {fileID: 3961881185118084784, guid: a429607ccbacaab48b3339a512999156, type: 3}
+  _animationLetter: {fileID: 7579215337987627067, guid: 49cd43dcfb3dabd44802bb8aac1cf1ea, type: 3}
+  _friendsWindowPrefab: {fileID: 4920551399054957383, guid: 7e1bccd885542a648a3b5bd8087495ff, type: 3}
+  _friendItemPrefab: {fileID: 5171643439022275588, guid: 2994d3d35cd40a14a980b7a99e3775d0, type: 3}
+  _chatWindowPrefab: {fileID: 8325874145746142952, guid: 4d408fe142a9a3840b32bd77f50b1892, type: 3}
+  _textMessageItemPrefab: {fileID: 8494185982273893376, guid: 04dea67eb127820429d1febbfa4eb459, type: 3}

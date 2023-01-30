@@ -1,0 +1,192 @@
+<!DOCTYPE html>	
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Crosswords - Puzzle Generator for Teachers</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" type="text/css" href="css/main.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/print.css" media="print">
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jquery.crossword-generator.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </head>
+  <body>
+    <header>
+      
+    </header>
+    <section class="tabs">
+      <ul class="tabTitle noSelect clear-fix">
+        <li class="active">About</li>
+        <li>How To?</li>
+      </ul>
+      <div class="tabBody">
+        <div class="tab">
+          <p>
+            Crosswords lets you generate sparse crossword puzzles out of a given
+            set of words. Sparse means that the puzzle will not be arranged to
+            completely fill a rectangular region (this would correspond to a
+            dense crossword puzzle).
+          </p>
+        </div>
+        <div class="tab">
+          <p>
+            To start out, use the <button class="inline inactive">Add Word</button>
+            button to set up a list of words. Once you're done, press
+            <button class="inline inactive">Generate Crossword</button>
+            in order to start the crossword generator. Your puzzle will appear
+            within seconds provided that the generator succeeds.
+          </p>
+          <p>
+            If you're not satisfied with the layout of the crossword, use the
+            <button class="inline inactive">Next Alternative</button> and
+            <button class="inline inactive">Previous Alternative</button> buttons to
+            cycle through different combinations of word arrangements. You can also
+            rotate the puzzle by 90 degrees using the <button class="inline inactive">Rotate</button>
+            button.
+          </p>
+          <p>
+            Once you found your desired word arrangement, enter clues for each
+            word in the text areas below the puzzle. For each word/clue pair you can
+            decide whether to show students the clue and ask for the word or do it the
+            other way around.
+          </p>
+          <p>
+            Finally, you can print both the puzzle and clues with the
+            <button class="inline inactive">Print (...)</button> buttons at the bottom
+            of the page. The teacher variant will include both words and clues. The student
+            variant will have only words or clues depending on the configuration you chose.
+          </p>
+          <p>
+            Note that the puzzle generation will fail if the specified words don't
+            allow for a proper connection. For instance, you cannot build a crossword
+            out of the words 'milk', 'sugar' and 'honey' since they don't have any
+            letters in common. In such a case the application will notify you
+            and suggest that you adapt your list of words.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="inputButtons">
+      <div class="buttonBox">
+        <button name="add">Add Word</button>
+        <button name="generate">Generate Crossword</button>
+        <button name="clear">Clear Everything</button>
+      </div>
+    </section>
+    <section class="inputData">
+      <h3>Words</h3>
+      <ul class="inputData inputWords">
+        <li class="clear-fix">
+          <div class="dragHandleWrapper">
+            <div class="dragHandle">
+              <span class="counter"></span>
+            </div>
+          </div>
+          <div class="spacer"></div>
+          <div class="column word">
+            <input id="word1" name="word" type="text" value="Cross" placeholder="Enter a word...">
+          </div>
+          <div class="column removeButton">
+            <button name="remove">X</button>
+          </div>
+        </li>
+        <li class="clear-fix">
+          <div class="dragHandleWrapper">
+            <div class="dragHandle">
+              <span class="counter"></span>
+            </div>
+          </div>
+          <div class="spacer"></div>
+          <div class="column word">
+            <input id="word2" name="word" type="text" value="Word" placeholder="Enter a word...">
+          </div>
+          <div class="column removeButton">
+            <button name="remove">X</button>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="crosswordButtons">
+      <div class="buttonBox">
+        <button name="previous" disabled="disabled">Previous Alternative</button>
+        <button name="next" disabled="disabled">Next Alternative</button>
+        <button name="rotate" disabled="disabled">Rotate</button>
+      </div>
+    </section>
+    <section class="crossword">
+      <div id="placeholderMessage" class="infoMessage">
+        <p>
+          Your crossword will appear here after you hit the
+          <button class="inline inactive">Generate Crossword</button> button.
+        </p>
+      </div>
+      <div id="outdatedMessage" class="infoMessage">
+        <p>
+          You've changed the set of input words. Hence, the crossword shown below
+          is probably outdated. To generate a new crossword, hit the
+          <button class="inline inactive">Generate Crossword</button> button.
+        </p>
+      </div>
+      <div id="errorMessage" class="infoMessage">
+        <p>
+          The set of words you specified does not seem to fit into a crossword.
+          Please adapt your input by adding or removing words and hit the
+          <button class="inline inactive">Generate Crossword</button>
+          button again.
+        </p>
+      </div>
+      <div id="crosswordWrapper" class="noSelect clear-fix"></div>
+    </section>
+    <section class="inputData">
+      <h3>Clues</h3>
+      <ul class="inputData inputClues">
+        <li class="clear-fix">
+          <div class="dragHandleWrapper">
+            <div class="dragHandle">
+              <span class="counter"></span>
+            </div>
+          </div>
+          <div class="spacer"></div>
+          <div class="column clue">
+            <div class="wordCopy">"<span></span>"</div>
+            <textarea id="clue1" name="clue" rows="2" placeholder="Enter a clue...">A structure consisting of an upright and a transverse piece</textarea>
+            <div id="clueSwitch1" class="clueSwitch">
+              <!--<label for="clueSwitch1">Ask for:&nbsp;</label>
+              <button class="segment left word active">Word</button>
+              <button class="segment right clue">Clue</button>-->
+            </div>
+          </div>
+        </li>
+        <li class="clear-fix">
+          <div class="dragHandleWrapper">
+            <div class="dragHandle">
+              <span class="counter"></span>
+            </div>
+          </div>
+          <div class="spacer"></div>
+          <div class="column clue">
+            <div class="wordCopy">"<span></span>"</div>
+            <textarea id="clue2" name="clue" rows="2" placeholder="Enter a clue...">A unit of language</textarea>
+            <div id="clueSwitch2" class="clueSwitch">
+              <!--<label for="clueSwitch2">Ask for:&nbsp;</label>
+              <button class="segment left word active">Word</button>
+              <button class="segment right clue">Clue</button>-->
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="printButtons">
+      <div class="buttonBox">
+        <button name="savejson">Save json</button>
+      </div>
+    </section>
+    <section class="clues"></section>
+    <footer></footer>
+  </body>
+</html>

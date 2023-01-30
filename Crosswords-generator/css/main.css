@@ -1,0 +1,414 @@
+/* General */
+
+/* Color scheme
+ * 
+ * E62240
+ * F0A11D
+ * 879516
+ * 571942
+ * 096569
+ */
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.clear-fix:before, .clear-fix:after {
+  content: " ";
+  display: table;
+}
+
+.clear-fix:after {
+  clear: both;
+}
+
+.noSelect {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+       -o-user-select: none;
+          user-select: none;
+  
+  cursor: default;
+}
+
+body {
+  padding: 1em;
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  background: #F0A11D;
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+  color: #096569;
+}
+
+
+/* Header */
+
+header {
+  margin-bottom: 1.5em;
+  color: #571942;
+  font-weight: bold;
+}
+
+table.title {
+  font-size: 2em;
+  margin: 0.25em auto;
+}
+
+.greeter {
+  text-align: center;
+}
+
+
+/* Sections */
+
+section {
+  width: 35em;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+section + section:before {
+  content: "";
+  display: block;
+  width: 100%;
+  margin: 1em 0;
+  border-top: 0.1em solid #A16500;
+  box-shadow: 0 0 0em 0.1em #F5B74E;
+}
+
+section h3 {
+  text-align: center;
+}
+
+
+/* Top tabs */
+
+ul.tabTitle {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 0.2em solid #571942;
+  color: #571942;
+  font-weight: bold;
+}
+
+ul.tabTitle li {
+  float: left;
+  padding: 0.25em 0.75em;
+  border-top: 0.1em solid transparent;
+}
+
+ul.tabTitle li:hover {
+  cursor: pointer;
+  background: #80436B;
+  color: #fff;
+}
+
+ul.tabTitle li.active {
+  background: #571942;
+  color: #FFF;
+}
+
+div.tabBody div + div {
+  display: none;
+}
+
+
+/* Buttons */
+
+button {
+  margin: 0;
+  padding: 0.5em;
+  
+  border: 0.1em solid #571942;
+  border-radius: 0.25em;
+  
+  background: linear-gradient(#963475,#571942);
+  box-shadow: 0 0.1em 0 0 #CB63A8 inset;
+  
+  color: #FFF;
+  font-size: 0.8em;
+  font-weight: bold;
+  text-shadow: 0 0.1em 0.1em #000;
+}
+
+button:hover:not(:disabled):not(.inactive), button.segment.active {
+  color: #E62240;
+}
+
+button:disabled {
+  border: 0.1em solid #555;
+  background: linear-gradient(#999,#555);
+  box-shadow: 0 0.1em 0 0 #CCC inset;
+}
+
+button.inline {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+button.inactive {
+  cursor: default;
+}
+
+.buttonBox {
+  text-align: center;
+}
+
+
+/* Input data */
+
+ul.inputData {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  counter-reset: inputData;
+}
+
+ul.inputData li {
+  position: relative;
+}
+
+ul.inputData li + li {
+  margin-top: 0.25em;
+}
+
+ul.inputData .dragHandleWrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  
+  width: 2.5em;
+  padding: 0.25em;
+  
+  color: #FFF;
+}
+
+ul.inputData .dragHandle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.2em;
+  
+  border: 0.1em solid #084346;
+  border-radius: 0.25em;
+  
+  background: linear-gradient(#096569,#084346);
+  box-shadow: 0 0.1em 0 0 #00989F inset;
+  
+  text-align: center;
+}
+
+ul.inputData .dragHandle:hover {
+  cursor: pointer;
+  color: #E62240;
+}
+
+ul.inputData span.counter {
+  display: inline-block;
+  
+  height: 1em;
+  line-height: 1em;
+  margin-top: -0.5em;
+  
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+}
+
+ul.inputData span.counter:after {
+  counter-increment: inputData;
+  content: counter(inputData);
+}
+
+ul.inputData .spacer {
+  float: left;
+  width: 2.5em;
+  height: 0.1em;
+}
+
+ul.inputData .column {
+  float: left;
+  padding: 0.25em;
+}
+
+ul.inputData .column.word {
+  width: calc(100% - 2.5em - 2.5em);
+  height: 2.25em;
+}
+
+ul.inputData .column.removeButton {
+  width: 2.5em;
+  height: 2.25em;
+}
+
+ul.inputData .column.removeButton button {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+ul.inputData .column.clue {
+  width: calc(100% - 2.5em);
+}
+
+ul.inputData input[type=text] {
+  width: 100%;
+  height: 100%;
+  padding: 0.25em;
+  border: 0.1em solid #096569;
+  border-radius: 0.2em;
+}
+
+ul.inputData textarea {
+  width: 100%;
+  padding: 0.25em;
+  border: 0.1em solid #096569;
+  border-radius: 0.2em;
+}
+
+div.wordCopy {
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+div.clueSwitch {
+  display: inline-block;
+}
+
+div.clueSwitch button {
+  width: 4em;
+  padding: 0;
+  float: left;
+}
+
+div.clueSwitch label {
+  float: left;
+  font-size: 0.8em;
+}
+
+div.clueSwitch .segment.left {
+  border-right: 0.1em solid #571942;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+div.clueSwitch .segment.right {
+  border-left: 0.1em solid #571942;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+
+/* Info messages */
+
+.infoMessage {
+  display: none;
+  margin: 0 0.5em 1em 0.5em;
+}
+
+.infoMessage p {
+  font-size: 0.9em;
+  text-align: center;
+}
+
+
+/* Crossword */
+
+table.crossword {
+  border-collapse: separate;
+  border-spacing: 0.1em;
+}
+
+table.crossword tr td {
+  position: relative;
+  
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  
+  width: 1.5em;
+  height: 1.5em;
+  
+  font-size: 1em;
+  font-weight: bold;
+}
+
+table.crossword tr td.letter {
+  border: 0.1em solid #555;
+  border-radius: 0.1em;
+  background: #FFF;
+}
+
+table.crossword tr td.clue {
+  color: #FFF;
+  
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+table.crossword tr td.clue.horizontal {
+  background-image: url(../img/horizontal.svg);
+}
+
+table.crossword tr td.clue.vertical {
+  background-image: url(../img/vertical.svg);
+}
+
+#crosswordWrapper table.crossword {
+  position: absolute;
+}
+
+
+/* Clues */
+
+section.clues {
+  display: none;
+}
+
+ul.clues {
+  margin: 0;
+  list-style: none;
+  counter-reset: clues;
+}
+
+ul.clues li + li {
+  margin-top: 0.125em;
+}
+
+ul.clues li:before {
+  content: counter(clues);
+  counter-increment: clues;
+  
+  margin-right: 0.5em;
+  
+  font-weight: bold;
+}
+
+
+/* Footer */
+
+footer {
+  width: 35em;
+  max-width: 90%;
+  
+  margin: 1em auto 0 auto;
+  padding: 0.5em 0 0 0;
+  
+  border-top: 0.2em solid #571942;
+  
+  text-align: center;
+}
+
+footer span {
+  font-size: 0.8em;
+}
